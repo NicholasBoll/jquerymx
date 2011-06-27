@@ -84,11 +84,6 @@ test("hookup", function(){
 	
 	$("#qunit-test-area").html("//jquery/view/test/qunit/hookup.ejs",{}); //makes sure no error happens
 })
-test("jQuery.fn.hookup", function(){
-	$("#qunit-test-area").html("");
-	var els = $($.View("//jquery/view/test/qunit/hookup.ejs",{})).hookup();
-	$("#qunit-test-area").html(els); //makes sure no error happens
-})
 
 test("inline templates other than 'tmpl' like ejs", function(){
         $("#qunit-test-area").html("");
@@ -148,4 +143,8 @@ test("modifier with a deferred", function(){
 		equals($("#qunit-test-area").html(), "FOO", "worked!");
 	},100);
 
-})
+});
+
+/*test("bad url", function(){
+	$.View("//asfdsaf/sadf.ejs")
+});*/
